@@ -55,24 +55,24 @@ function addCard(inputOne, inputPic, inputTwo) {
   likeButton.textContent = '❤️'
   likeButton.classList.add('like_button')
   buttons.appendChild(likeButton)
-  
-  likeButton.addEventListener('click', function() {
+
+  likeButton.addEventListener('click', function () {
     likeButton.classList.toggle('like_active')
   })
-  
+
   let deleteButton = document.createElement('button')
   deleteButton.textContent = '💣'
   deleteButton.classList.add('deleate_button')
   buttons.appendChild(deleteButton)
 
-  deleteButton.addEventListener('click', function() {
+  deleteButton.addEventListener('click', function () {
     card.remove()
   })
 
   return card
 }
 
-addButton.addEventListener('click', function() {
+addButton.addEventListener('click', function () {
   let newCard = addCard(inputCity.value, inputPicture.value, inputText.value)
   contentCard.appendChild(newCard)
 })
